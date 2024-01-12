@@ -1,0 +1,78 @@
+[
+  {
+    "currentQuestion": "Q кличе тебе піти з ним до капітана корабля НЛО",
+    "stepId": 1,
+    "hasNextStep": true,
+    "isWin": false,
+    "answersForCurrentQuestion": [
+      {
+        "text": "Прийняти запрошення",
+        "ledToStep": 2
+      },
+      {
+        "text": "Відмовитись",
+        "ledToStep": 5
+      }
+    ]
+  },
+  {
+    "currentQuestion": "Піти до капітана літаючої тарілки?",
+    "stepId": 2,
+    "hasNextStep": true,
+    "isWin": false,
+    "answersForCurrentQuestion": [
+      {
+        "text": "Познайомитися з капітаном",
+        "ledToStep": 3
+      },
+      {
+        "text": "Сказати, що ти обурений викраденням",
+        "ledToStep": 6
+      }
+    ]
+  },
+  {
+    "currentQuestion": "Капітан питає де ви живете",
+    "stepId": 3,
+    "hasNextStep": true,
+    "isWin": false,
+    "answersForCurrentQuestion": [
+      {
+        "text": "Сказати правду",
+        "ledToStep": 4
+      },
+      {
+        "text": "Назвати адресу Марсу",
+        "ledToStep": 7
+      }
+    ]
+  },
+  {
+    "currentQuestion": "Тебе доставили додому на літаючій тарілці!",
+    "stepId": 4,
+    "hasNextStep": false,
+    "isWin": true,
+    "answersForCurrentQuestion": null
+  },
+  {
+    "currentQuestion": "Q образилось і пішло...",
+    "stepId": 5,
+    "hasNextStep": false,
+    "isWin": false,
+    "answersForCurrentQuestion": null
+  },
+  {
+    "currentQuestion": "Ти не пішов до капітана, і тебе висадили на безлюдному острові!",
+    "stepId": 6,
+    "hasNextStep": false,
+    "isWin": false,
+    "answersForCurrentQuestion": null
+  },
+  {
+    "currentQuestion": "Тебе доставили на Марс!",
+    "stepId": 7,
+    "hasNextStep": false,
+    "isWin": false,
+    "answersForCurrentQuestion": null
+  }
+]
