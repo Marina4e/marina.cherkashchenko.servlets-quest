@@ -1,4 +1,4 @@
-package javarush.service;
+package ua.javarush.service;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;

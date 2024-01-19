@@ -1,20 +1,17 @@
-package javarush;
+package ua.javarush.path;
 
 import lombok.Getter;
-import lombok.Setter;
-
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 
 @Getter
-@Setter
-public class Repository {
+public class Resources {
     private final String pathToJsonProp;
     private final String pathToRes;
     private final String pathToSessionInfo;
 
-    public Repository() {
-        String pathRes = URLDecoder.decode(Repository.class
+    public Resources() {
+        String pathRes = URLDecoder.decode(Resources.class
                 .getProtectionDomain()
                 .getCodeSource()
                 .getLocation()

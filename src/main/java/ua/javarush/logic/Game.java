@@ -1,8 +1,8 @@
-package javarush.logic;
+package ua.javarush.logic;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import javarush.Repository;
-import javarush.entity.Step;
+import ua.javarush.entity.Step;
+import ua.javarush.path.Resources;
 import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j2;
 
@@ -12,22 +12,22 @@ import java.util.*;
 
 @Log4j2
 public class Game {
-    private final ArrayList<Step> steps;
-    private final Repository repository;
+    private final ArrayList<Step> questions;
+    private final Resources resources;
     private final ObjectMapper mapper;
 
-    public Game(Repository repository, ObjectMapper mapper) {
+    public Game(Resources resources, ObjectMapper mapper) {
         log.info("Initializing Game...");
         this.mapper = mapper;
-        this.repository = repository;
-        steps = readSteps();
+        this.resources = resources;
+        questions = readSteps();
         log.info("Game initialized.");
     }
 
     @SneakyThrows
     private ArrayList<Step> readSteps() {
         log.info("Reading Steps...");
-        String pathToJsonProp = repository.getPathToJsonProp();
+        String pathToJsonProp = resources.getPathToJsonProp();
         File file = new File(pathToJsonProp);
         ArrayList<Step> result;
         log.info("Converting JSON to ArrayList<Step>...");
@@ -41,7 +41,7 @@ public class Game {
 
     public Step getStepById(Integer id) {
         log.info(id);
-        Optional<Step> optionalStep = steps.stream()
+        Optional<Step> optionalStep = questions.stream()
                 .filter(step -> Objects.equals(step.getStepId(), id))
                 .findAny();
         log.info("Search completed.");

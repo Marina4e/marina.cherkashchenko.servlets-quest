@@ -1,8 +1,8 @@
-package javarush.servlet;
+package ua.javarush.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import javarush.Repository;
-import javarush.logic.Game;
+import ua.javarush.path.Resources;
+import ua.javarush.logic.Game;
 
 
 import javax.servlet.ServletException;
@@ -21,7 +21,7 @@ public class GameServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        game = new Game(new Repository(), new ObjectMapper());
+        game = new Game(new Resources(), new ObjectMapper());
     }
 
     @Override

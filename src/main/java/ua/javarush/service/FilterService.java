@@ -1,4 +1,4 @@
-package javarush.service;
+package ua.javarush.service;
 
 
 import javax.servlet.http.HttpServletRequest;

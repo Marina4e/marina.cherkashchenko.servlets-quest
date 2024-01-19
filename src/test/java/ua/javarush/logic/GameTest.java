@@ -1,11 +1,11 @@
-package javarush.logic;
+package ua.javarush.logic;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import javarush.Repository;
-import javarush.entity.Action;
-import javarush.entity.Step;
+import ua.javarush.entity.Step;
+import ua.javarush.path.Resources;
+import ua.javarush.entity.Action;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -26,12 +26,12 @@ class GameTest {
     static ArrayList<Step> expectedList;
     static Game game;
     @Mock
-    Repository repository;
+    Resources resources;
 
 
     @BeforeAll
     public static void init() {
-        game = new Game(new Repository(), new ObjectMapper());
+        game = new Game(new Resources(), new ObjectMapper());
         expectedList = new ArrayList<>();
         expectedList.add(new Step("TestQuestion1", 1, true, false, new ArrayList<>
                 (Arrays.asList(new Action("Action1", 2), new Action("Action2", 5)))));
@@ -41,9 +41,9 @@ class GameTest {
 
     @Test
     void readStepsTest() {
-        Mockito.doReturn("src/test/java/javarush/resources/stepInfoForTesting.json").when(repository).getPathToJsonProp();
+        Mockito.doReturn("src/test/java/javarush/resources/stepInfoForTesting.json").when(resources).getPathToJsonProp();
         ObjectMapper mapper = new ObjectMapper();
-        String pathToJsonProp = repository.getPathToJsonProp();
+        String pathToJsonProp = resources.getPathToJsonProp();
         File file = new File(pathToJsonProp);
         ArrayList<Step> result = new ArrayList<>();
         try {

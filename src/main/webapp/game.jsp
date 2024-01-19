@@ -12,7 +12,7 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<jsp:useBean id="step" scope="request" type="javarush.entity.Step"/>
+<jsp:useBean id="step" scope="request" type="ua.javarush.entity.Step"/>
 <div class="card" style="width: 30rem; horiz-align: center; left: 35%;">
     <div class="card-body">
         <h1 style="font-family: 'Comic Sans MS',monospace " class="fw-normal">${step.currentQuestion}</h1>
