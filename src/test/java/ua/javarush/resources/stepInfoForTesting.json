@@ -1,9 +1,9 @@
 [ {
-  "currentQuestion" : "TestQuestion1",
-  "stepId" : 1,
+  "text": "TestQuestion1",
+  "id": 1,
   "hasNextStep" : true,
   "isWin" : false,
-  "answersForCurrentQuestion" : [ {
+  "answers": [ {
     "text" : "Action1",
     "ledToStep" : 2
   }, {
@@ -11,11 +11,11 @@
     "ledToStep" : 5
   } ]
 }, {
-  "currentQuestion" : "TestQuestion2",
-  "stepId" : 2,
+  "text": "TestQuestion2",
+  "id": 2,
   "hasNextStep" : true,
   "isWin" : false,
-  "answersForCurrentQuestion" : [ {
+  "answers": [ {
     "text" : "Action3",
     "ledToStep" : 3
   }, {

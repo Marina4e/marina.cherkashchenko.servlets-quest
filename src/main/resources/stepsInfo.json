@@ -1,10 +1,10 @@
 [
   {
-    "currentQuestion": "Q кличе тебе піти з ним до капітана корабля НЛО",
-    "stepId": 1,
+    "text": "Q кличе тебе піти з ним до капітана корабля НЛО",
+    "id": 1,
     "hasNextStep": true,
     "isWin": false,
-    "answersForCurrentQuestion": [
+    "answers": [
       {
         "text": "Прийняти запрошення",
         "ledToStep": 2
@@ -16,11 +16,11 @@
     ]
   },
   {
-    "currentQuestion": "Піти до капітана літаючої тарілки?",
-    "stepId": 2,
+    "text": "Піти до капітана літаючої тарілки?",
+    "id": 2,
     "hasNextStep": true,
     "isWin": false,
-    "answersForCurrentQuestion": [
+    "answers": [
       {
         "text": "Познайомитися з капітаном",
         "ledToStep": 3
@@ -32,11 +32,11 @@
     ]
   },
   {
-    "currentQuestion": "Капітан питає де ви живете",
-    "stepId": 3,
+    "text": "Капітан питає де ви живете",
+    "id": 3,
     "hasNextStep": true,
     "isWin": false,
-    "answersForCurrentQuestion": [
+    "answers": [
       {
         "text": "Сказати правду",
         "ledToStep": 4
@@ -48,31 +48,31 @@
     ]
   },
   {
-    "currentQuestion": "Тебе доставили додому на літаючій тарілці!",
-    "stepId": 4,
+    "text": "Тебе доставили додому на літаючій тарілці!",
+    "id": 4,
     "hasNextStep": false,
     "isWin": true,
-    "answersForCurrentQuestion": null
+    "answers": null
   },
   {
-    "currentQuestion": "Q образилось і пішло...",
-    "stepId": 5,
+    "text": "Q образилось і пішло...",
+    "id": 5,
     "hasNextStep": false,
     "isWin": false,
-    "answersForCurrentQuestion": null
+    "answers": null
   },
   {
-    "currentQuestion": "Ти не пішов до капітана, і тебе висадили на безлюдному острові!",
-    "stepId": 6,
+    "text": "Ти не пішов до капітана, і тебе висадили на безлюдному острові!",
+    "id": 6,
     "hasNextStep": false,
     "isWin": false,
-    "answersForCurrentQuestion": null
+    "answers": null
   },
   {
-    "currentQuestion": "Тебе доставили на Марс!",
-    "stepId": 7,
+    "text": "Тебе доставили на Марс!",
+    "id": 7,
     "hasNextStep": false,
     "isWin": false,
-    "answersForCurrentQuestion": null
+    "answers": null
   }
 ]

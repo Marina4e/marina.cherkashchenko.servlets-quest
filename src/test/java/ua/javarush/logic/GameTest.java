@@ -3,7 +3,7 @@ package ua.javarush.logic;
 import static org.junit.jupiter.api.Assertions.*;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ua.javarush.entity.Step;
+import ua.javarush.entity.Question;
 import ua.javarush.path.Resources;
 import ua.javarush.entity.Action;
 import org.junit.jupiter.api.BeforeAll;
@@ -23,7 +23,7 @@ import java.util.Arrays;
 
 @ExtendWith(MockitoExtension.class)
 class GameTest {
-    static ArrayList<Step> expectedList;
+    static ArrayList<Question> expectedList;
     static Game game;
     @Mock
     Resources resources;
@@ -33,21 +33,21 @@ class GameTest {
     public static void init() {
         game = new Game(new Resources(), new ObjectMapper());
         expectedList = new ArrayList<>();
-        expectedList.add(new Step("TestQuestion1", 1, true, false, new ArrayList<>
+        expectedList.add(new Question("TestQuestion1", 1, true, false, new ArrayList<>
                 (Arrays.asList(new Action("Action1", 2), new Action("Action2", 5)))));
-        expectedList.add(new Step("TestQuestion2", 2, true, false, new ArrayList<>
+        expectedList.add(new Question("TestQuestion2", 2, true, false, new ArrayList<>
                 (Arrays.asList(new Action("Action3", 3), new Action("Action4", 6)))));
     }
 
     @Test
     void readStepsTest() {
-        Mockito.doReturn("src/test/java/javarush/resources/stepInfoForTesting.json").when(resources).getPathToJsonProp();
+        Mockito.doReturn("src/test/java/ua/javarush/resources/stepInfoForTesting.json").when(resources).getPathToJsonProp();
         ObjectMapper mapper = new ObjectMapper();
         String pathToJsonProp = resources.getPathToJsonProp();
         File file = new File(pathToJsonProp);
-        ArrayList<Step> result = new ArrayList<>();
+        ArrayList<Question> result = new ArrayList<>();
         try {
-            result = mapper.readValue(file, mapper.getTypeFactory().constructCollectionType(ArrayList.class, Step.class));
+            result = mapper.readValue(file, mapper.getTypeFactory().constructCollectionType(ArrayList.class, Question.class));
         } catch (IOException e) {
             e.fillInStackTrace();
         }
@@ -57,8 +57,8 @@ class GameTest {
     @ParameterizedTest
     @ValueSource(ints = {1, 2})
     void getStepById_returnStepClassTest(int i) {
-        Step step = game.getStepById(i);
-        assertAll("step", () -> assertEquals(Step.class, step.getClass()),
-                () -> assertEquals((int) step.getStepId(), i));
+        Question step = game.getStepById(i);
+        assertAll("step", () -> assertEquals(Question.class, step.getClass()),
+                () -> assertEquals((int) step.getId(), i));
     }
 }

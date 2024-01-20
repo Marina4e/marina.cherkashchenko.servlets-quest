@@ -9,10 +9,10 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Step {
-    private String currentQuestion;
-    private Integer stepId;
+public class Question {
+    private String text;
+    private Integer id;
     private Boolean hasNextStep;
     private Boolean isWin;
-    private List<Action> answersForCurrentQuestion;
+    private List<Action> answers;
 }

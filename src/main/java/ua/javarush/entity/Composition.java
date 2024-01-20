@@ -3,6 +3,6 @@ package ua.javarush.entity;
 import lombok.Data;
 
 @Data
-public class Text {
+public class Composition {
     String text;
 }

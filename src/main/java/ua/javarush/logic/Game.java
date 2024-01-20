@@ -1,7 +1,7 @@
 package ua.javarush.logic;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ua.javarush.entity.Step;
+import ua.javarush.entity.Question;
 import ua.javarush.path.Resources;
 import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j2;
@@ -12,7 +12,7 @@ import java.util.*;
 
 @Log4j2
 public class Game {
-    private final ArrayList<Step> questions;
+    private final ArrayList<Question> questions;
     private final Resources resources;
     private final ObjectMapper mapper;
 
@@ -25,24 +25,24 @@ public class Game {
     }
 
     @SneakyThrows
-    private ArrayList<Step> readSteps() {
+    private ArrayList<Question> readSteps() {
         log.info("Reading Steps...");
         String pathToJsonProp = resources.getPathToJsonProp();
         File file = new File(pathToJsonProp);
-        ArrayList<Step> result;
+        ArrayList<Question> result;
         log.info("Converting JSON to ArrayList<Step>...");
         result = mapper.readValue(file, mapper.getTypeFactory()
-                .constructCollectionType(ArrayList.class, Step.class));
+                .constructCollectionType(ArrayList.class, Question.class));
         log.info("Conversion completed.");
         log.info(result);
         log.info("Steps read.");
         return result;
     }
 
-    public Step getStepById(Integer id) {
+    public Question getStepById(Integer id) {
         log.info(id);
-        Optional<Step> optionalStep = questions.stream()
-                .filter(step -> Objects.equals(step.getStepId(), id))
+        Optional<Question> optionalStep = questions.stream()
+                .filter(step -> Objects.equals(step.getId(), id))
                 .findAny();
         log.info("Search completed.");
         if (optionalStep.isPresent()) {

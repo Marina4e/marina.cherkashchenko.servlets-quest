@@ -12,13 +12,13 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<jsp:useBean id="step" scope="request" type="ua.javarush.entity.Step"/>
+<jsp:useBean id="step" scope="request" type="ua.javarush.entity.Question"/>
 <div class="card" style="width: 30rem; horiz-align: center; left: 35%;">
     <div class="card-body">
-        <h1 style="font-family: 'Comic Sans MS',monospace " class="fw-normal">${step.currentQuestion}</h1>
-        <c:if test="${step.answersForCurrentQuestion != null}">
+        <h1 style="font-family: 'Comic Sans MS',monospace " class="fw-normal">${step.text}</h1>
+        <c:if test="${step.answers != null}">
             <form action="gameServlet">
-                <c:forEach var="answer" items="${step.answersForCurrentQuestion}">
+                <c:forEach var="answer" items="${step.answers}">
                     <div>
                         <input class="form-check-input" type="radio" id="actionChoice${answer.ledToStep}"
                                name="stepID" value="${answer.ledToStep}">

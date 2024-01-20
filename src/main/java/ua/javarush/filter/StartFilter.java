@@ -16,7 +16,7 @@ import java.util.Map;
 
 @WebFilter(urlPatterns = "/gameServlet")
 public class StartFilter extends HttpFilter {
-    private final transient FilterService filterService = new FilterService();
+    private final FilterService filterService = new FilterService();
 
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res,
