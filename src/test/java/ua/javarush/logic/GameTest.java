@@ -47,7 +47,8 @@ class GameTest {
         File file = new File(pathToJsonProp);
         ArrayList<Question> result = new ArrayList<>();
         try {
-            result = mapper.readValue(file, mapper.getTypeFactory().constructCollectionType(ArrayList.class, Question.class));
+            result = mapper.readValue(file, mapper.getTypeFactory().
+                    constructCollectionType(ArrayList.class, Question.class));
         } catch (IOException e) {
             e.fillInStackTrace();
         }

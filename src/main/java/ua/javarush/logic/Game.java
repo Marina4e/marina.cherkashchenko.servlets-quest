@@ -45,10 +45,6 @@ public class Game {
                 .filter(step -> Objects.equals(step.getId(), id))
                 .findAny();
         log.info("Search completed.");
-        if (optionalStep.isPresent()) {
-            log.info(id);
-        } else
-            log.info(id);
         return optionalStep.orElse(null);
     }
 }
