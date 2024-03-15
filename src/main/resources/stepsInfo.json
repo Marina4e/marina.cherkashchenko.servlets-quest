@@ -1,0 +1,78 @@
+[
+  {
+    "text": "Q кличе тебе піти з ним до капітана корабля НЛО",
+    "id": 1,
+    "hasNextStep": true,
+    "isWin": false,
+    "answers": [
+      {
+        "text": "Прийняти запрошення",
+        "ledToStep": 2
+      },
+      {
+        "text": "Відмовитись",
+        "ledToStep": 5
+      }
+    ]
+  },
+  {
+    "text": "Піти до капітана літаючої тарілки?",
+    "id": 2,
+    "hasNextStep": true,
+    "isWin": false,
+    "answers": [
+      {
+        "text": "Познайомитися з капітаном",
+        "ledToStep": 3
+      },
+      {
+        "text": "Сказати, що ти обурений викраденням",
+        "ledToStep": 6
+      }
+    ]
+  },
+  {
+    "text": "Капітан питає де ви живете",
+    "id": 3,
+    "hasNextStep": true,
+    "isWin": false,
+    "answers": [
+      {
+        "text": "Сказати правду",
+        "ledToStep": 4
+      },
+      {
+        "text": "Назвати адресу Марсу",
+        "ledToStep": 7
+      }
+    ]
+  },
+  {
+    "text": "Тебе доставили додому на літаючій тарілці!",
+    "id": 4,
+    "hasNextStep": false,
+    "isWin": true,
+    "answers": null
+  },
+  {
+    "text": "Q образилось і пішло...",
+    "id": 5,
+    "hasNextStep": false,
+    "isWin": false,
+    "answers": null
+  },
+  {
+    "text": "Ти не пішов до капітана, і тебе висадили на безлюдному острові!",
+    "id": 6,
+    "hasNextStep": false,
+    "isWin": false,
+    "answers": null
+  },
+  {
+    "text": "Тебе доставили на Марс!",
+    "id": 7,
+    "hasNextStep": false,
+    "isWin": false,
+    "answers": null
+  }
+]
